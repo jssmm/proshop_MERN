@@ -8,21 +8,26 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jssmm/proshop_MERN.git"
   },
-  "author": "Jessen alejandro Mercado Mejia",
+  "author": "Jessen Alejandro Mercado Mejia",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jssmm/proshop_MERN/issues"
   },
   "homepage": "https://github.com/jssmm/proshop_MERN#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.11.11"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
